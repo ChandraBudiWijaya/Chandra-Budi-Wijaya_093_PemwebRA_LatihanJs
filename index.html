@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nilai Mahasiswa ITERA</title>
+    <!-- Memanggil file CSS agar tampilannya lebih rapi -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo ITERA biar tampil lebih resmi -->
+        <img src="Logo_ITERA.png" alt="ITERA">
+        <h1>Kalkulator Nilai Mahasiswa</h1> <!-- Judul biar penggunanya tahu fungsi aplikasi ini -->
+        
+        <!-- Bagian input nilai Tugas -->
+        <div class="form-group">
+            <label for="inputTugas">Nilai Tugas (30%)</label> <!-- Keterangan input untuk tugas -->
+            <input type="number" id="inputTugas" placeholder="Masukkan nilai Tugas" min="0" max="100">
+            <!-- Input angka untuk nilai Tugas, dari 0 sampai 100 -->
+        </div>
+
+        <!-- Bagian input nilai UTS -->
+        <div class="form-group">
+            <label for="inputUTS">Nilai UTS (30%)</label> <!-- Keterangan input untuk UTS -->
+            <input type="number" id="inputUTS" placeholder="Masukkan nilai UTS" min="0" max="100">
+            <!-- Input angka untuk nilai UTS, dari 0 sampai 100 -->
+        </div>
+
+        <!-- Bagian input nilai UAS -->
+        <div class="form-group">
+            <label for="inputUAS">Nilai UAS (40%)</label> <!-- Keterangan input untuk UAS -->
+            <input type="number" id="inputUAS" placeholder="Masukkan nilai UAS" min="0" max="100">
+            <!-- Input angka untuk nilai UAS, dari 0 sampai 100 -->
+        </div>
+
+        <!-- Tombol untuk menghitung nilai akhir -->
+        <button onclick="tampilkanHasil()">Hitung Nilai Akhir</button>
+        <!-- Pas ditekan, tombol ini akan menjalankan fungsi JavaScript yang namanya tampilkanHasil() buat ngitung dan nampilin hasil -->
+
+        <!-- Bagian untuk menampilkan hasil perhitungan -->
+        <div class="result">
+            <p id="hasilNilai">Nilai Akhir: -</p> <!-- Teks ini bakal diganti sama nilai akhir setelah dihitung -->
+            <p id="hasilHuruf">Nilai Mutu: -</p> <!-- Teks ini bakal diganti sama nilai huruf (A, B, C, dst) -->
+            <p id="hasilStatus">Status: -</p> <!-- Teks ini bakal diganti jadi Lulus atau Gagal sesuai nilai akhir -->
+        </div>
+    </div>
+
+    <!-- File JavaScript yang isinya fungsi untuk ngitung nilai -->
+    <script src="script.js"></script>
+</body>
+</html>
